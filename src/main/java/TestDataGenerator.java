@@ -12,22 +12,22 @@ public class TestDataGenerator {
     public static void main(String[] args) {
         List<Contact> contacts = generateContacts(8);
         saveContactsToJson(contacts, "contacts.json");
-        List<Group> groups = generateGroups(3, contacts);
+        List<Group> groups = generateGroups(4, contacts);
         saveGroupsToJson(groups, "groups.json");
     }
 
-    private static final String[] FIRST_NAMES = {"Александр", "Михаил", "Сергей", "Андрей", "Анна", "Елена", "Ольга"};
-    private static final String[] LAST_NAMES = {"Смирнов", "Сидоров", "Петров", "Васильев", "Михайлова", "Соколова"};
+    private static final String[] FIRST_NAMES = {"Александр", "Михаил", "Сергей", "Андрей", "Анна", "Елена", "Олег"};
+    private static final String[] LAST_NAMES = {"Смирнов", "Сидоров", "Петров", "Васильев", "Михайлова", "Соколов"};
     private static final String[] PATRONYMIC_NAMES = {"Александрович", "Михайлович", "Сергеевич", "Андреевич"};
-    private static final String[] GROUP_NAMES = {"Друзья", "Коллеги", "Родственники", "Другие"};
+    private static final String[] GROUP_NAMES = {"Категория здоровья А", "Категория здоровья Б", "Категория здоровья В", "Категория здоровья Г"};
 
     private static final String[] ADDRESSES = {
-            "123 Main Street",
-            "456 Elm Street",
-            "789 Oak Street",
-            "321 Pine Avenue",
-            "654 Birch Drive",
-            "987 Maple Court"
+            "ул. Гагарина д.15 кв.45",
+            "ул. Барбюса д.140 кв.83",
+            "ул. Агалакова д.62 кв.12",
+            "ул. Машиностроителей д.100 кв.11",
+            "ул. Новороссийская д.55 кв.38",
+            "ул. Дзержинского д.77 кв.19"
     };
 
     private static List<Contact> generateContacts(int count) {
